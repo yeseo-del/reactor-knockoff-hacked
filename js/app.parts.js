@@ -17,9 +17,9 @@ window.parts = [
 			base_power: 1,
 			base_heat: 1,
 			cell_tick_upgrade_cost: 1,
-			cell_tick_upgrade_multiplier: 1,
+			cell_tick_upgrade_multiplier: 32,
 			cell_power_upgrade_cost: 1,
-			cell_power_upgrade_multiplier: 1,
+			cell_power_upgrade_multiplier: 32,
 			cell_perpetual_upgrade_cost: 1
 		},
 		{
@@ -63,9 +63,9 @@ window.parts = [
 			base_power: 150,
 			base_heat: 1,
 			cell_tick_upgrade_cost: 1,
-			cell_tick_upgrade_multiplier: 100,
+			cell_tick_upgrade_multiplier: 32,
 			cell_power_upgrade_cost: 1,
-			cell_power_upgrade_multiplier: 100,
+			cell_power_upgrade_multiplier: 32,
 			cell_perpetual_upgrade_cost: 1
 		},
 		{
@@ -81,9 +81,9 @@ window.parts = [
 			base_power: 1,
 			base_heat: 1,
 			cell_tick_upgrade_cost: 1,
-			cell_tick_upgrade_multiplier: 100,
+			cell_tick_upgrade_multiplier: 32,
 			cell_power_upgrade_cost: 1,
-			cell_power_upgrade_multiplier: 100,
+			cell_power_upgrade_multiplier: 32,
 			cell_perpetual_upgrade_cost: 1
 		},
 		{
@@ -99,9 +99,9 @@ window.parts = [
 			base_power: 1600000,
 			base_heat: 1,
 			cell_tick_upgrade_cost: 1,
-			cell_tick_upgrade_multiplier: 100,
+			cell_tick_upgrade_multiplier: 32,
 			cell_power_upgrade_cost: 1,
-			cell_power_upgrade_multiplier: 100,
+			cell_power_upgrade_multiplier: 32,
 			cell_perpetual_upgrade_cost: 1
 		},
 		{
@@ -117,9 +117,9 @@ window.parts = [
 			base_power: 230000000,
 			base_heat: 1,
 			cell_tick_upgrade_cost: 1,
-			cell_tick_upgrade_multiplier: 100,
+			cell_tick_upgrade_multiplier: 32,
 			cell_power_upgrade_cost: 1,
-			cell_power_upgrade_multiplier: 100,
+			cell_power_upgrade_multiplier: 32,
 			cell_perpetual_upgrade_cost: 1
 		},
 		{
@@ -135,9 +135,9 @@ window.parts = [
 			base_power: 52000000000,
 			base_heat: 1,
 			cell_tick_upgrade_cost: 1,
-			cell_tick_upgrade_multiplier: 100,
+			cell_tick_upgrade_multiplier: 32,
 			cell_power_upgrade_cost: 1,
-			cell_power_upgrade_multiplier: 100,
+			cell_power_upgrade_multiplier: 32,
 			cell_perpetual_upgrade_cost: 1
 		},
 		{
