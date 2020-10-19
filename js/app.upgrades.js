@@ -7,8 +7,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Improved Chronometers',
 			description: '+1 tick per second per level of upgrade.',
-			cost: 10000,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.loop_wait = game.base_loop_wait / ( upgrade.level + 1 );
 			}
@@ -18,8 +18,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Forceful Fusion',
 			description: 'Cells produce 1% more power at 1k heat, 2% power at 2m heat etc. per level of upgrade.',
-			cost: 10000,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.heat_power_multiplier = upgrade.level;
 			}
@@ -30,7 +30,7 @@ window.upgrades = function(game) {
 			title: 'Heat Control Operator',
 			description: 'Your reactor no longer automatically removes heat from itself when it is below its maximum heat capacity. This makes Forceful Fusion easier to maintain.',
 			// TODO: Figure out a good price for this
-			cost: 1000000,
+			cost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 			}
@@ -42,7 +42,7 @@ window.upgrades = function(game) {
 			description: 'Your reactor outlets no longer output more heat than what the connected vents can handle.',
 			erequires: 'heat_control_operator',
 			// TODO: Figure out a good price for this
-			cost: 10000000,
+			cost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.heat_outlet_controlled = upgrade.level;
@@ -53,8 +53,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Improved Piping',
 			description: 'Venting manually is 10x as effective per level of upgrade.',
-			cost: 100,
-			multiplier: 20,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.manual_heat_reduce = game.base_manual_heat_reduce * Math.pow(10, upgrade.level);
 				game.ui.say('var', 'manual_heat_reduce', game.manual_heat_reduce);
@@ -65,8 +65,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Improved Alloys',
 			description: 'Plating holds 100% more heat per level of upgrade.',
-			cost: 5000,
-			multiplier: 5,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 				for ( var i = 1; i <= 6; i++ ) {
@@ -83,8 +83,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Improved Power Lines',
 			description: 'Sells 1% of your power each tick per level of upgrade.',
-			cost: 100,
-			multiplier: 10,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.auto_sell_multiplier = .01 * upgrade.level;
 			}
@@ -94,8 +94,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Improved Wiring',
 			description: 'Capacitors hold +100% power and heat per level of upgrade.',
-			cost: 5000,
-			multiplier: 5,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 				for ( var i = 1; i <= 6; i++ ) {
@@ -111,8 +111,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Perpetual Capacitors',
 			description: 'If capacitors are on a cool surface when they go over their maximum heat containment, the heat is vented directly into the reactor and the capacitor is replaced. The capacitor costs 10 times the normal cost.',
-			cost: 1000000000000000000,
-			multiplier: 5,
+			cost: 1,
+			multiplier: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				/* TODO: ponder this - it's part-wide so it's basically just a setting
@@ -129,8 +129,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Improved Coolant Cells',
 			description: 'Coolant cells hold 100% more heat per level of upgrade.',
-			cost: 5000,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				for ( var i = 1; i <= 6; i++ ) {
 					part = game.part_objects['coolant_cell' + i];
@@ -146,8 +146,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Improved Reflector Density',
 			description: 'Reflectors last 100% longer per level of upgrade.',
-			cost: 5000,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 				for ( var i = 1; i <= 6; i++ ) {
@@ -162,8 +162,8 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Improved Neutron Reflection',
 			description: 'Reflectors generate an additional 1% power per level of upgrade.',
-			cost: 5000,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 				for ( var i = 1; i <= 6; i++ ) {
@@ -178,7 +178,7 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Perpetual Reflectors',
 			description: 'Reflectors are automtically replaced after being destroyed if they are on a cool surface. The replacement part will cost 1.5 times the normal cost.',
-			cost: 1000000000,
+			cost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				var part;
@@ -196,8 +196,8 @@ window.upgrades = function(game) {
 			type: 'exchangers',
 			title: 'Improved Heat Exchangers',
 			description: 'Heat Exchangers, Inlets and Outlets hold and exchange 100% more heat per level of upgrade',
-			cost: 600,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 
@@ -222,8 +222,8 @@ window.upgrades = function(game) {
 			type: 'exchangers',
 			title: 'Reinforced Heat Exchangers',
 			description: 'Each plating increases the amout of heat that exchangers can exchange by 1% per level of upgrade per level of plating.',
-			cost: 1000,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.transfer_plating_multiplier = upgrade.level;
 			}
@@ -233,8 +233,8 @@ window.upgrades = function(game) {
 			type: 'exchangers',
 			title: 'Active Exchangers',
 			description: 'Each capacitor increases the amout of heat that exchangers can exchange by 1% per level of upgrade per level of capacitor.',
-			cost: 1000,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.transfer_capacitor_multiplier = upgrade.level;
 			}
@@ -246,8 +246,8 @@ window.upgrades = function(game) {
 			type: 'vents',
 			title: 'Improved Heat Vents',
 			description: 'Vents hold and vent 100% more heat per level of upgrade.',
-			cost: 250,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 				for ( var i = 1; i <= 6; i++ ) {
@@ -263,8 +263,8 @@ window.upgrades = function(game) {
 			type: 'vents',
 			title: 'Improved Heatsinks',
 			description: 'Each plating increases the amount of heat that vents can vent by 1% per level of upgrade per level of plating.',
-			cost: 1000,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.vent_plating_multiplier = upgrade.level;
 			}
@@ -274,8 +274,8 @@ window.upgrades = function(game) {
 			type: 'vents',
 			title: 'Active Venting',
 			description: 'Each capacitor increases the effectiveness of heat that vents can vent by 1% per level of upgrade per level of capacitor.',
-			cost: 1000,
-			multiplier: 100,
+			cost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.vent_capacitor_multiplier = upgrade.level;
 			}
@@ -305,9 +305,9 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Expand Reactor Rows',
 			description: 'Add one row to the reactor for each level of the upgrade.',
-			cost: 100,
+			cost: 1,
 			levels: 20,
-			multiplier: 100,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.rows = game.base_rows + upgrade.level;
 			}
@@ -317,9 +317,9 @@ window.upgrades = function(game) {
 			type: 'other',
 			title: 'Expand Reactor Cols',
 			description: 'Add one column to the reactor for each level of the upgrade.',
-			cost: 100,
+			cost: 1,
 			levels: 20,
-			multiplier: 100,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.cols = game.base_cols + upgrade.level;
 			}
@@ -346,8 +346,8 @@ window.upgrades = function(game) {
 			title: 'Infused Cells',
 			description: 'Each fuel cell produces an additional 100% base power per level of upgrade.',
 			erequires: 'laboratory',
-			ecost: 50,
-			multiplier: 2,
+			ecost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.update_cell_power();
 			}
@@ -358,8 +358,8 @@ window.upgrades = function(game) {
 			title: 'Unleashed Cells',
 			description: 'Each fuel cell produces two times their base heat and power per level of upgrade.',
 			erequires: 'laboratory',
-			ecost: 100,
-			multiplier: 2,
+			ecost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 
@@ -380,8 +380,8 @@ window.upgrades = function(game) {
 			title: 'Quantum Buffering',
 			description: 'Capacitors and platings provide twice as much reactor power and heat capacity, and capacitors can contain twice as much heat per level of upgrade.',
 			erequires: 'laboratory',
-			ecost: 50,
-			multiplier: 2,
+			ecost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 				for ( var i = 1; i <= 6; i++ ) {
@@ -402,8 +402,8 @@ window.upgrades = function(game) {
 			title: 'Full Spectrum Reflectors',
 			description: 'Reflectors gain an additional 100% of their base power reflection per level of upgrade.',
 			erequires: 'laboratory',
-			ecost: 50,
-			multiplier: 2,
+			ecost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 				for ( var i = 1; i <= 6; i++ ) {
@@ -419,8 +419,8 @@ window.upgrades = function(game) {
 			title: 'Fluid Hyperdynamics',
 			description: 'Heat vents, exchangers, inlets and outlets are two times as effective per level of upgrade.',
 			erequires: 'laboratory',
-			ecost: 50,
-			multiplier: 2,
+			ecost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 
@@ -449,8 +449,8 @@ window.upgrades = function(game) {
 			title: 'Fractal Piping',
 			description: 'Heat vents and exchangers hold two times their base heat per level of upgrade.',
 			erequires: 'laboratory',
-			ecost: 50,
-			multiplier: 2,
+			ecost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				var part;
 
@@ -471,8 +471,8 @@ window.upgrades = function(game) {
 			title: 'Ultracryonics',
 			description: 'Coolant cells hold two times their base heat per level of upgrade.',
 			erequires: 'laboratory',
-			ecost: 50,
-			multiplier: 2,
+			ecost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				for ( var i = 1; i <= 6; i++ ) {
 					part = game.part_objects['coolant_cell' + i];
@@ -487,8 +487,8 @@ window.upgrades = function(game) {
 			title: 'Phlembotinum Core',
 			description: 'Increase the base heat and power storage of the reactor by four times per level of upgrade.',
 			erequires: 'laboratory',
-			ecost: 50,
-			multiplier: 2,
+			ecost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				game.altered_max_power = game.base_max_power * Math.pow(4, upgrade.level);
 				game.altered_max_heat = game.base_max_heat * Math.pow(4, upgrade.level);
@@ -519,7 +519,7 @@ window.upgrades = function(game) {
 			title: 'Protium Cells',
 			description: 'Allows you to use protium cells.',
 			erequires: 'laboratory',
-			ecost: 50,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				// Nothing, just required for placing parts
@@ -531,8 +531,8 @@ window.upgrades = function(game) {
 			title: 'Unstable Protium',
 			description: 'Protium cells last half as long and product twice as much power and heat per level.',
 			erequires: 'protium_cells',
-			ecost: 500,
-			multiplier: 2,
+			ecost: 1,
+			multiplier: 1,
 			onclick: function(upgrade) {
 				for ( var i = 1; i <= 3; i++ ) {
 					part = game.part_objects['protium' + i];
@@ -551,7 +551,7 @@ window.upgrades = function(game) {
 			title: 'Heat Reflection',
 			description: 'Allows you to use Thermal Neutron Reflectors. When purchased, the EP cost of other experimental part upgrades increases.',
 			erequires: 'laboratory',
-			ecost: 10000,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.epart_onclick(upgrade);
@@ -563,7 +563,7 @@ window.upgrades = function(game) {
 			title: 'Experimental Capacitance',
 			description: 'Allows you to use Extreme Capacitors. When purchased, the EP cost of other experimental part upgrades increases.',
 			erequires: 'laboratory',
-			ecost: 10000,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.epart_onclick(upgrade);
@@ -575,7 +575,7 @@ window.upgrades = function(game) {
 			title: 'Vortex Cooling',
 			description: 'Allows you to use Extreme Vents. When purchased, the EP cost of other experimental part upgrades increases.',
 			erequires: 'laboratory',
-			ecost: 10000,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.epart_onclick(upgrade);
@@ -587,7 +587,7 @@ window.upgrades = function(game) {
 			title: 'Underground Heat Extraction',
 			description: 'Allows you to use Extreme Heat Exchangers. When purchased, the EP cost of other experimental part upgrades increases.',
 			erequires: 'laboratory',
-			ecost: 10000,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.epart_onclick(upgrade);
@@ -599,7 +599,7 @@ window.upgrades = function(game) {
 			title: 'Vortex Extraction',
 			description: 'Allows you to use Extreme Heat Inlets. When purchased, the EP cost of other experimental part upgrades increases.',
 			erequires: 'laboratory',
-			ecost: 10000,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.epart_onclick(upgrade);
@@ -611,7 +611,7 @@ window.upgrades = function(game) {
 			title: 'Explosive Ejection',
 			description: 'Allows you to use Extreme Heat Outlets. When purchased, the EP cost of other experimental part upgrades increases.',
 			erequires: 'laboratory',
-			ecost: 10000,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.epart_onclick(upgrade);
@@ -623,7 +623,7 @@ window.upgrades = function(game) {
 			title: 'Thermionic Conversion',
 			description: 'Allows you to use Thermionic Coolant Cells. When purchased, the EP cost of other experimental part upgrades increases.',
 			erequires: 'laboratory',
-			ecost: 10000,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.epart_onclick(upgrade);
@@ -635,7 +635,7 @@ window.upgrades = function(game) {
 			title: 'Micro Capacitance',
 			description: 'Allows you to use Charged Reactor Plating. When purchased, the EP cost of other experimental part upgrades increases.',
 			erequires: 'laboratory',
-			ecost: 10000,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.epart_onclick(upgrade);
@@ -647,7 +647,7 @@ window.upgrades = function(game) {
 			title: 'Singularity Harnessing',
 			description: 'Allows you to use Black Hole Particle Accelerators. When purchased, the EP cost of other experimental part upgrades increases.',
 			erequires: 'laboratory',
-			ecost: 10000,
+			ecost: 1,
 			levels: 1,
 			onclick: function(upgrade) {
 				game.epart_onclick(upgrade);
@@ -662,8 +662,8 @@ window.upgrades = function(game) {
 			title: 'Improved ' + game.part_objects['particle_accelerator' + i].part.title,
 			description: 'Increase the maximum heat that ' + game.part_objects['particle_accelerator' + i].part.title + 's can use to create Exotic Particles by 100% per level of upgrade.',
 			erequires: 'laboratory',
-			ecost: 200 * i,
-			multiplier: 2,
+			ecost: 1 * i,
+			multiplier: 1,
 			onclick: (function(i) {
 				return function(upgrade) {
 					var part;
