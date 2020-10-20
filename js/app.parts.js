@@ -133,7 +133,7 @@ window.parts = [
 			cost_multiplier: 1,
 			base_ticks: 86000,
 			base_power: 52000000000,
-			base_heat: 5000000000000000000000000,
+			base_heat: 50000000000000000000,
 			cell_tick_upgrade_cost: 1,
 			cell_tick_upgrade_multiplier: 32,
 			cell_power_upgrade_cost: 1,
